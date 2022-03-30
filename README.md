@@ -4,7 +4,7 @@ Thank you
 <br /> CODE ->>
 <br /> df = pd.DataFrame(pd.read_csv('table_primary_keys.csv'))
 <br /> for a, b in zip(df['Table Name'], df['Primary Key']):
-  dfff = spark.sql("""Create view if not exists dynamic_view.{} as with LTS as (
+  <br /> dfff = spark.sql("""Create view if not exists dynamic_view.{} as with LTS as (
   select
     case
       when max(INSERT_TS) < max(UPDATE_TS) then max(INSERT_TS)
