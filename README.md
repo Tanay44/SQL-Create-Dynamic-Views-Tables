@@ -1,7 +1,7 @@
 # SQL-Create-Dynamic-Views-Tables
 Through this method we can create views or tables dynamically without putting table names &amp; keys manually or we will get a idea how this things are working.
 Thank you
-CODE ->>
+<br /> CODE ->>
 df = pd.DataFrame(pd.read_csv('table_primary_keys.csv'))
 for a, b in zip(df['Table Name'], df['Primary Key']):
   dfff = spark.sql("""Create view if not exists dynamic_view.{} as with LTS as (
